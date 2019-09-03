@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        dadukate=cli.cli:cli
+    
