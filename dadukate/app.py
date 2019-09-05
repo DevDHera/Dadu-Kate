@@ -47,6 +47,8 @@ def create_app(settings_override=None):
 
     app.config.from_object('config.settings')
     app.config.from_pyfile('settings.py', silent=True)
+    app.config.from_envvar('MAIL_USERNAME', silent=True)
+    app.config.from_envvar('MAIL_PASSWORD', silent=True)
 
     if settings_override:
         app.config.update(settings_override)
